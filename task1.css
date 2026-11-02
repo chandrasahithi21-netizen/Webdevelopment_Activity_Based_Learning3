@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #222;
+}
+header {
+    background: #17153b;
+    padding: 18px 5%;
+    color: white;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+nav h2 {
+    color: #ffd166;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 18px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #ffd166;
+}
+.hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+    background: linear-gradient(135deg, #17153b, #6c36a5, #e84a8a);
+}
+.hero h1 {
+    font-size: clamp(38px, 7vw, 65px);
+    color: #ffd166;
+    margin-bottom: 10px;
+}
+.hero h2 {
+    font-size: clamp(20px, 4vw, 30px);
+}
+.hero p {
+    margin: 12px 0;
+    font-size: 18px;
+}
+.btn {
+    display: inline-block;
+    background: #ffca3a;
+    color: #17153b;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 12px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #ff9f1c;
+    transform: translateY(-3px);
+}
+section {
+    padding: 55px 7%;
+}
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #27245c;
+    margin-bottom: 30px;
+}
+.event-container,
+.coordinator-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+.event-card,
+.coordinator-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+.event-card:hover,
+.coordinator-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+}
+.event-card h3,
+.coordinator-card h3 {
+    color: #6c36a5;
+    margin-bottom: 12px;
+}
+.event-card ul {
+    padding-left: 22px;
+    margin-top: 12px;
+}
+.technical {
+    border-top: 5px solid #3772ff;
+}
+.cultural {
+    border-top: 5px solid #e84a8a;
+}
+.workshop {
+    border-top: 5px solid #2a9d8f;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+th {
+    background: #27245c;
+    color: white;
+}
+tr:nth-child(even) {
+    background: #ecebfa;
+}
+.rules-box {
+    max-width: 800px;
+    margin: auto;
+    padding: 25px 35px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.rules-box li {
+    margin-bottom: 12px;
+}
+.registration-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+}
+.registration-form label {
+    display: block;
+    margin: 14px 0 6px;
+    font-weight: bold;
+}
+.registration-form input,
+.registration-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+.registration-form input:focus,
+.registration-form select:focus {
+    outline: 2px solid #6c36a5;
+    border-color: #6c36a5;
+}
+.registration-form button {
+    width: 100%;
+    margin-top: 22px;
+    font-size: 16px;
+}
+footer {
+    background: #17153b;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+footer h3 {
+    color: #ffd166;
+    margin-bottom: 10px;
+}
+@media (max-width: 850px) {
+    nav {
+        flex-direction: column;
+    }
+    nav ul {
+        justify-content: center;
+    }
+    .event-container,
+    .coordinator-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 600px) {
+    section {
+        padding: 40px 5%;
+    }
+    nav ul {
+        gap: 12px;
+    }
+    .event-container,
+    .coordinator-container {
+        grid-template-columns: 1fr;
+    }
+    .section-title {
+        font-size: 26px;
+    }
+    table {
+        font-size: 13px;
+    }
+    th,
+    td {
+        padding: 8px 5px;
+    }
+    .registration-form {
+        padding: 20px;
+    }
+}
